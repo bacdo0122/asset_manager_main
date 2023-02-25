@@ -3,13 +3,28 @@ import './notification.scss'
 import ClearIcon from '@mui/icons-material/Clear';
 import axios from 'axios';
 import { setNotification } from '../../reducer/notification';
+import { useEffect } from 'react';
+import { getAccessToken } from '../../helper/localStorage';
 
 const NotificationTable = () => {
 
     const notification = useSelector(state => state.notification.notifications)
-    console.log("notification:", notification);
     const dispatch = useDispatch()
-
+    const handleFetchData = async () => {
+        try {
+          const getNotification =  await axios.get(process.env.REACT_APP_API_BASE_USER_URL + 'notification',{
+            headers: {
+              Authorization: `Bearer ` + getAccessToken()
+            }
+          })
+          dispatch(setNotification(getNotification.data))
+        } catch (error) {
+          console.log("error:", error);
+        }
+      }
+       useEffect(()=>{
+        handleFetchData();
+      },[])
     const handleDelete = async (id) => {
         try {
             await axios.delete(process.env.REACT_APP_API_BASE_USER_URL + `notification/delete/${id}`)

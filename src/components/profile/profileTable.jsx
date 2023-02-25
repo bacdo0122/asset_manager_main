@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { assetProfileColumns } from '../../dataasset'
 import './profileTable.scss'
-const ProfileTable =  () => {
+const ProfileTable =  ({socket}) => {
     const user = useSelector(state => state.auth.user)
     const [data, setData] = useState([]);
 
@@ -24,6 +24,7 @@ const ProfileTable =  () => {
     const handleClickRePay = async (id) => {
         try {
              await axios.post(process.env.REACT_APP_API_BASE_USER_URL + `asset/repay/${id}`);
+             socket.emit("reset_asset")
              handleFetchData();
           } catch (error) {
             console.log("error:", error);

@@ -41,9 +41,7 @@ const Pendingtable = ({socket}) => {
    
     try {
       await axios.post(process.env.REACT_APP_API_BASE_USER_URL + `pending/accept/${id}/${username}`,body);
-      handleFetchData();
       socket.emit("reset_pending")
-      socket.emit("reset_consumable")
       socket.emit("allow_borrow_asset", {
         userID: body.employeeID._id,
         assetName: body.assetID.name,

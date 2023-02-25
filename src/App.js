@@ -39,9 +39,10 @@ function App() {
   const user = useSelector((state) => state.auth.user)
   const ditpatch = useDispatch()
   useEffect(() => {
+
     socket.on("borrow_asset", async ()=>{
       try {
-        
+       
         if(user.role === "admin") handleFetchNotification()
       } catch (error) {
           throw new Error("can't post socket")
@@ -86,6 +87,7 @@ function App() {
           Authorization: `Bearer ` + getAccessToken()
         }
       })
+  
      ditpatch(setNotification(data.data))
     } catch (error) {
       throw new Error("can't get axios")
@@ -102,7 +104,7 @@ function App() {
           <Route path="/">
             <Route index element={<Home />} />
             <Route path="login" element={<Login />} />
-            <Route path="profile" element={<Profile />} />
+            <Route path="profile" element={<Profile socket={socket}/>} />
             <Route path="users">
               <Route index element={<List socket={socket}/>} />
               <Route path=":userId" element={<Single />} />

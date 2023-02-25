@@ -23,6 +23,7 @@ const Featured = () => {
         unused: getUnused.data.length,
         pending: getPending.data.length,
       })
+      // console.log("data:", (getActive.data.length / (getActive.data.length+ getUnused.data.length + getPending.data.length)));
     } catch (error) {
       console.log("err:", error);
     }
@@ -39,7 +40,7 @@ const Featured = () => {
       <div className="bottom">
         <div className="featuredChart">
           <CircularProgressbar value={80} text={`${parseFloat(Number(parseInt(feature.active) /
-           (parseInt(feature.unused) + parseInt(feature.pending)))*100).toFixed(2) }%`} strokeWidth={5} />
+           (parseInt(feature.unused)+parseInt(feature.active) + parseInt(feature.pending)))*100).toFixed(2) }%`} strokeWidth={5} />
         </div>
         <p className="title">Total assets active</p>
         <p className="amount">{feature.active && feature.active}</p>

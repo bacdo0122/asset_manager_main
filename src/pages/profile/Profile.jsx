@@ -2,13 +2,13 @@ import "./Profile.scss"
 import Sidebar from "../../components/sidebar/Sidebar"
 import Navbar from "../../components/navbar/Navbar"
 import ProfileTable from '../../components/profile/profileTable'
-const Profile = () => {
+const Profile = ({socket}) => {
   return (
     <div className="pending">
       <Sidebar/>
       <div className="pendingContainer">
         <Navbar/>
-        <ProfileTable />
+        <ProfileTable socket={socket}/>
       </div>
     </div>
   )
