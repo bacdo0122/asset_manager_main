@@ -50,7 +50,7 @@ const Navbar = () => {
           </div>
           <div className="item">
             <img
-              src={user && `http://localhost:5000/public/images/${user.img}`}
+              src={user && `https://asset-manager.onrender.com/public/images/${user.img}`}
               alt=""
               className="avatar"
             />
