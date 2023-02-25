@@ -31,7 +31,7 @@ import { setAsset } from "./reducer/asset";
 import { setPending } from "./reducer/pending";
 import { setConsumable } from "./reducer/consumable";
 
-const host = "http://localhost:5000";
+const host = "https://asset-manager.onrender.com";
 const socket = socketIOClient.connect(host)
 
 function App() {
