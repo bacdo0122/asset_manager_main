@@ -1,0 +1,69 @@
+.checkout {
+    display: flex;
+    width: 100%;
+    .checkoutContainer {
+      flex: 6;
+  
+      .top {
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+  
+        .left {
+            display: block;
+          margin-left: 40px;
+          -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+          box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+          padding: 20px;
+          position: relative;
+  
+          
+  
+          .item {
+            
+            display: flex;
+            gap: 150px;
+            margin: 20px;
+            .itemImg {
+              width: 200px;
+              height: 200px;
+              border-radius: 30%;
+              padding: 0px;
+              
+            }
+  
+            
+          }
+        }
+  
+        
+      }
+  
+      .bottom {
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+        padding: 20px;
+        margin: 10px 20px;
+      }
+    .addpayment{
+        display: flex;
+        align-items: center;
+        margin: 20px 0px;
+        color: blue;
+    }
+    .icon-title {
+        font-size: 16px !important;
+        
+    }
+    
+    .title {
+        margin-left: 10px;
+    }
+    .title {
+        font-size: 16px;
+        color: blue;
+        margin-bottom: 0px;
+      }
+    }
+  }
+  
