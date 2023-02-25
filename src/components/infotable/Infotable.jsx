@@ -96,7 +96,7 @@ const List = ({name}) => {
               <TableCell className="tableCell"><Link to={`/assets/${row._id}`}>{ row._id}</Link></TableCell>
               <TableCell className="tableCell">
                 <div className="cellWrapper">
-                  <img src={`http://localhost:5000/public/images/${row.img}`}  alt="" className="image" />
+                  <img src={`https://asset-manager.onrender.com/public/images/${row.img}`}  alt="" className="image" />
                   {row.name}
                 </div>
               </TableCell>
