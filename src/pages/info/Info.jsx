@@ -48,7 +48,7 @@ const Info = ({socket}) => {
               <h1 className="title">Information</h1>
               <div className="item">
                 <img
-                  src={data && `http://localhost:5000/public/images/${data.img}`}
+                  src={data && `https://asset-manager.onrender.com/public/images/${data.img}`}
                   alt=""
                   className="itemImg"
                   
