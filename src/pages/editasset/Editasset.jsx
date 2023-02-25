@@ -77,7 +77,7 @@ const Editasset = ({ socket,inputs, title }) => {
         <div className="userShow">
           <div className="userShowTop">
             <img
-             src={asset && `http://localhost:5000/public/images/${asset.img}`}
+             src={asset && `https://asset-manager.onrender.com/public/images/${asset.img}`}
               alt=""
               className="userShowImg"
             />
@@ -216,7 +216,7 @@ const Editasset = ({ socket,inputs, title }) => {
                   src={
                     file
                       ? URL.createObjectURL(file)
-                      : (asset && `http://localhost:5000/public/images/${asset.img}`)
+                      : (asset && `https://asset-manager.onrender.com/public/images/${asset.img}`)
                   }
                   alt=""
                 />
