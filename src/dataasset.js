@@ -11,7 +11,7 @@ export const assetColumns = [
       renderCell: (params) => {
         return (
           <div className="cellWithImg">
-            <img className="cellImg" src={`http://localhost:5000/public/images/${params.row.img}`} alt="avatar" />
+            <img className="cellImg" src={`https://asset-manager.onrender.com/public/images/${params.row.img}`} alt="avatar" />
             {params.row._id}
           </div>
         );
@@ -154,7 +154,7 @@ export const assetColumns = [
       renderCell: (params) => {
         return (
           <div className="cellWithImg">
-            <img className="cellImg" src={`http://localhost:5000/public/images/${params.row.assetID.img}`} alt="avatar" />
+            <img className="cellImg" src={`https://asset-manager.onrender.com/public/images/${params.row.assetID.img}`} alt="avatar" />
             {params.row.assetID.name}
           </div>
         );
@@ -259,7 +259,7 @@ export const assetColumns = [
       renderCell: (params) => {
         return (
           <div className="cellWithImg">
-          <img className="cellImg" src={`http://localhost:5000/public/images/${params.row.img}`} alt="avatar" />
+          <img className="cellImg" src={`https://asset-manager.onrender.com/public/images/${params.row.img}`} alt="avatar" />
           {params.row.name}
         </div>
         );
@@ -333,7 +333,7 @@ export const assetColumns = [
         renderCell: (params) => {
           return (
             <div className="cellWithImg">
-              <img className="cellImg" src={`http://localhost:5000/public/images/${params.row.img}`} alt="avatar" />
+              <img className="cellImg" src={`https://asset-manager.onrender.com/public/images/${params.row.img}`} alt="avatar" />
               {params.row.name}
             </div>
           );
