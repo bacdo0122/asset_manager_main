@@ -56,7 +56,7 @@ const ProfileTable =  () => {
                 <div className="profile-inner">
                     <div className="row-1">
                         <div className="profile-img-name">
-                            <img src={user && `http://localhost:5000/public/images/${user.img}`} alt={user && user.username} />
+                            <img src={user && `https://asset-manager.onrender.com/public/images/${user.img}`} alt={user && user.username} />
                             <div className="profile-name">
                                 <span className="name">{user && user.name}</span>
                                 <span className="department">{user && user.department}</span>
