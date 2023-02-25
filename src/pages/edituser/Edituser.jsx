@@ -88,7 +88,7 @@ const Edituser = ({ socket }) => {
         <div className="userShow">
           <div className="userShowTop">
             <img
-              src={user && `http://localhost:5000/public/images/${user.img}`}
+              src={user && `https://asset-manager.onrender.com/public/images/${user.img}`}
               alt=""
               className="userShowImg"
             />
@@ -241,7 +241,7 @@ const Edituser = ({ socket }) => {
                   src={
                     file
                       ? URL.createObjectURL(file)
-                      : `http://localhost:5000/public/images/${dataInputs.img}`
+                      : `https://asset-manager.onrender.com/public/images/${dataInputs.img}`
                   }
                   alt=""
                 />
