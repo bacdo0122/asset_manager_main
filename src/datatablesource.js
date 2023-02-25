@@ -16,7 +16,7 @@ export const userColumns = [
     renderCell: (params) => {
       return (
         <div className="cellWithImg">
-          <img className="cellImg" src={`http://localhost:5000/public/images/${params.row.img}`} alt="avatar" />
+          <img className="cellImg" src={`https://asset-manager.onrender.com/public/images/${params.row.img}`} alt="avatar" />
           {params.row.name}
         </div>
       );
